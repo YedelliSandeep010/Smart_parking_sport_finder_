@@ -1,0 +1,35 @@
+import { createContext, useContext, useEffect, useState } from 'react';
+
+const ThemeContext = createContext();
+
+export const useTheme = () => {
+    const context = useContext(ThemeContext);
+    if (context === undefined)
+        throw new Error('useTheme must be used within a ThemeProvider');
+    return context;
+};
+
+export function ThemeProvider({ children }) {
+    const [theme, setTheme] = useState(() => {
+        // Check local storage or system preference
+        const stored = localStorage.getItem('park_ease_theme');
+        if (stored) return stored;
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    });
+
+    useEffect(() => {
+        const root = window.document.documentElement;
+        root.setAttribute('data-theme', theme);
+        localStorage.setItem('park_ease_theme', theme);
+    }, [theme]);
+
+    const toggleTheme = () => {
+        setTheme(prev => prev === 'dark' ? 'light' : 'dark');
+    };
+
+    return (
+        <ThemeContext.Provider value={{ theme, toggleTheme }}>
+            {children}
+        </ThemeContext.Provider>
+    );
+}
