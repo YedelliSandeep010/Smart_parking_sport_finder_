@@ -181,32 +181,70 @@ export const ParkingProvider = ({ children }) => {
         setSlots(slots.map(s => s.id === slotId ? { ...s, isActive: !s.isActive } : s));
     };
 
+    // Check Availability
+    const checkAvailability = (slotId, startTime, endTime) => {
+        const slotBookings = bookings.filter(b => b.slotId === slotId && b.status === 'active');
+
+        for (const booking of slotBookings) {
+            // Check overlap
+            // Existing: |S-------E|
+            // New:          |s-------e|  -> Overlap
+            // New: |s-------e|           -> Overlap
+
+            // Overlap condition: Not (NewEnd <= ExistingStart OR NewStart >= ExistingEnd)
+            // Simplified: NewStart < ExistingEnd && NewEnd > ExistingStart
+
+            const existingStart = booking.startTime;
+            const existingEnd = booking.endTime || (existingStart + (2 * 60 * 60 * 1000)); // Default 2 hrs if undefined
+
+            if (startTime < existingEnd && endTime > existingStart) {
+                return false; // Conflict found
+            }
+        }
+        return true;
+    };
+
     // User/Booking Actions
-    const bookSlot = (slotId, user, vehicleNo) => {
+    const bookSlot = (slotId, user, vehicleNo, startTime, endTime) => {
         const slot = slots.find(s => s.id === slotId);
         if (!slot) throw new Error('Slot not found');
         if (!slot.isActive) throw new Error('Slot is currently disabled');
         if (slot.isMaintenance) throw new Error('Slot is under maintenance');
-        if (slot.isOccupied) throw new Error('Slot not available');
 
-        // M3: Start Timer logic (Booking creation)
+        // Use provided start/end or default to "Now"
+        const start = startTime || Date.now();
+        const end = endTime || null;
+
+        // Validate availability
+        if (end && !checkAvailability(slotId, start, end)) {
+            throw new Error('Slot is already booked for this time period.');
+        }
+
+        // Basic check for "Now" if no range provided (Legacy compatibility)
+        if (!end && slot.isOccupied) {
+            throw new Error('Slot not available');
+        }
+
         const newBooking = {
             id: `B${Date.now()}`,
             slotId,
-            userId: user.id || user.email, // Fallback if id missing
-            userRole: user.role || 'user', // Add Role for Reports
+            userId: user.id || user.email,
+            userRole: user.role || 'user',
             userName: user.fullName,
             vehicleNo,
-            startTime: Date.now(),
-            endTime: null,
+            startTime: start,
+            endTime: end,
             status: 'active',
             cost: 0
         };
 
         setBookings([newBooking, ...bookings]);
 
-        // Mark slot as occupied
-        setSlots(slots.map(s => s.id === slotId ? { ...s, isOccupied: true } : s));
+        // If booking starts now (or in past) and hasn't ended, mark occupied
+        const now = Date.now();
+        if (start <= now && (!end || end > now)) {
+            setSlots(slots.map(s => s.id === slotId ? { ...s, isOccupied: true } : s));
+        }
 
         return newBooking;
     };

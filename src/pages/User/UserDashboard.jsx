@@ -1,16 +1,19 @@
 import { useState, useMemo } from 'react';
 import { useParking } from '../../context/ParkingContext';
 import { useAuth } from '../../context/AuthContext';
-import { Search, MapPin, Clock, Car, Bike, Truck, ArrowLeft, ChevronRight, Navigation, LayoutGrid, Calendar } from 'lucide-react';
+import { MapPin, Clock, ArrowLeft, Navigation, LayoutGrid } from 'lucide-react';
 import TimerModal from '../../components/User/TimerModal';
 import VenueMap from '../../components/User/VenueMap';
+import SlotGrid from '../../components/User/SlotGrid';
+import BookingModal from '../../components/User/BookingModal';
 
 export default function UserDashboard() {
-    const { slots, bookings } = useParking();
+    const { slots, bookings, bookSlot } = useParking();
     const { user } = useAuth();
     const [selectedRegion, setSelectedRegion] = useState('');
     const [selectedVenue, setSelectedVenue] = useState(null);
     const [activeBooking, setActiveBooking] = useState(null);
+    const [bookingSlot, setBookingSlot] = useState(null); // For BookingModal
 
     // Filter to show only active slots to users
     const availableSlots = useMemo(() => slots.filter(s => s.isActive !== false), [slots]);
@@ -50,6 +53,23 @@ export default function UserDashboard() {
     const handleRegionChange = (e) => {
         setSelectedRegion(e.target.value);
         setSelectedVenue(null);
+    };
+
+    const handleBookingConfirm = (bookingData) => {
+        try {
+            bookSlot(
+                bookingData.slotId,
+                user,
+                bookingData.vehicleNo,
+                bookingData.startTime,
+                bookingData.endTime
+            );
+            setBookingSlot(null);
+            // Optionally show success or navigate to active bookings
+            // For now, staying on page. One-way binding will update SlotGrid to red.
+        } catch (err) {
+            alert(err.message); // Simple alert for error in modal context
+        }
     };
 
     return (
@@ -171,105 +191,25 @@ export default function UserDashboard() {
                     <h2 className="text-gradient" style={{ marginBottom: '0.5rem' }}>{selectedVenue}</h2>
                     <p style={{ color: 'var(--text-muted)', marginBottom: '2rem' }}>{filteredSlots.length} parking spots found</p>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '1.5rem' }}>
-                        {filteredSlots.map((slot, index) => (
-                            <div key={slot.id} className="animate-slide-up" style={{ animationDelay: `${index * 0.05}s` }}>
-                                <SlotCard slot={slot} setActiveBooking={setActiveBooking} />
-                            </div>
-                        ))}
-                    </div>
+                    <SlotGrid slots={filteredSlots} onSlotSelect={setBookingSlot} />
                 </div>
             )}
 
-            {/* Timer Modal */}
+            {/* Modals */}
+            {bookingSlot && (
+                <BookingModal
+                    slot={bookingSlot}
+                    onClose={() => setBookingSlot(null)}
+                    onConfirm={handleBookingConfirm}
+                />
+            )}
+
             {activeBooking && (
                 <TimerModal
                     booking={activeBooking}
                     onClose={() => setActiveBooking(null)}
-                    isNewBooking={!activeBooking.startTime}
                 />
             )}
-        </div>
-    );
-}
-
-function SlotCard({ slot, setActiveBooking }) {
-    const { bookSlot } = useParking();
-    const { user } = useAuth();
-    const [error, setError] = useState('');
-
-    const getIcon = (type) => {
-        switch (type) {
-            case 'Bike': return <Bike size={40} strokeWidth={1.5} />;
-            case 'Truck': return <Truck size={40} strokeWidth={1.5} />;
-            default: return <Car size={40} strokeWidth={1.5} />;
-        }
-    };
-
-    const handleBook = () => {
-        try {
-            const booking = bookSlot(slot.id, user, user.vehicleNo || 'Unknown');
-            setActiveBooking(booking);
-        } catch (err) {
-            setError(err.message);
-            setTimeout(() => setError(''), 3000);
-        }
-    };
-
-    const isAvailable = !slot.isOccupied && !slot.isMaintenance;
-
-    return (
-        <div className="card" style={{
-            position: 'relative',
-            background: isAvailable
-                ? 'var(--card-bg)'
-                : 'var(--bg-surface)',
-            borderColor: isAvailable
-                ? 'var(--card-border)'
-                : 'rgba(239, 68, 68, 0.2)', // Using static rgba for now as dim variant isn't defined
-            opacity: isAvailable ? 1 : 0.8
-        }}>
-            {/* Status Badge */}
-            <div style={{
-                position: 'absolute', top: '1rem', right: '1rem',
-                padding: '0.25rem 0.75rem', borderRadius: '1rem', fontSize: '0.75rem', fontWeight: 'bold',
-                background: slot.isMaintenance
-                    ? 'rgba(245, 158, 11, 0.2)'
-                    : (slot.isOccupied ? 'rgba(239, 68, 68, 0.2)' : 'rgba(16, 185, 129, 0.2)'),
-                color: slot.isMaintenance
-                    ? '#fbbf24'
-                    : (slot.isOccupied ? 'var(--status-error)' : 'var(--status-success)'),
-                boxShadow: isAvailable ? '0 0 10px rgba(16, 185, 129, 0.2)' : 'none'
-            }}>
-                {slot.isMaintenance ? 'Maintenance' : (slot.isOccupied ? 'Occupied' : 'Open')}
-            </div>
-
-            <div style={{
-                color: isAvailable ? 'var(--secondary)' : 'var(--text-muted)',
-                marginBottom: '1.5rem',
-                padding: '1rem',
-                background: 'var(--input-bg)',
-                borderRadius: '1rem',
-                display: 'inline-block'
-            }}>
-                {getIcon(slot.type)}
-            </div>
-
-            <h3 style={{ fontSize: '1.4rem', marginBottom: '0.25rem', color: 'var(--text-main)' }}>{slot.id}</h3>
-            <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '1.5rem' }}>
-                {slot.type} Parking
-            </p>
-
-            {error && <div style={{ color: '#fca5a5', fontSize: '0.8rem', marginBottom: '0.5rem' }}>{error}</div>}
-
-            <button
-                disabled={!isAvailable}
-                onClick={handleBook}
-                className={isAvailable ? 'btn btn-primary' : 'btn btn-secondary'}
-                style={{ width: '100%', cursor: isAvailable ? 'pointer' : 'not-allowed', opacity: isAvailable ? 1 : 0.5 }}
-            >
-                {slot.isMaintenance ? 'Under Maintenance' : (slot.isOccupied ? 'Unavailable' : 'Book Now')}
-            </button>
         </div>
     );
 }
