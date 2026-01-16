@@ -14,7 +14,9 @@ export const ParkingProvider = ({ children }) => {
         const storedBookings = localStorage.getItem('park_ease_bookings');
 
         if (storedSlots) {
-            setSlots(JSON.parse(storedSlots));
+            const parsed = JSON.parse(storedSlots);
+            // Default isActive to true if undefined
+            setSlots(parsed.map(s => ({ ...s, isActive: s.isActive !== false })));
         } else {
             // Seed some initial slots if empty
             const initialSlots = [
@@ -124,11 +126,14 @@ export const ParkingProvider = ({ children }) => {
                 {
                     id: 'MUM-001', region: 'Maharashtra', city: 'Mumbai', venue: 'Phoenix Palladium',
                     location: 'Phoenix Palladium', isOccupied: false, type: 'Car',
-                    coordinates: { x: 50, y: 50 }
+                    coordinates: { x: 50, y: 50 },
+                    isActive: true
                 },
             ];
-            setSlots(initialSlots);
-            localStorage.setItem('park_ease_slots_v4', JSON.stringify(initialSlots));
+            // Ensure all initial slots have isActive
+            const slotsWithActive = initialSlots.map(s => ({ ...s, isActive: true }));
+            setSlots(slotsWithActive);
+            localStorage.setItem('park_ease_slots_v4', JSON.stringify(slotsWithActive));
         }
 
         if (storedBookings) {
@@ -138,7 +143,7 @@ export const ParkingProvider = ({ children }) => {
 
     // Update storage when state changes
     useEffect(() => {
-        if (slots.length > 0) localStorage.setItem('park_ease_slots_v3', JSON.stringify(slots));
+        if (slots.length > 0) localStorage.setItem('park_ease_slots_v4', JSON.stringify(slots));
     }, [slots]);
 
     useEffect(() => {
@@ -147,29 +152,40 @@ export const ParkingProvider = ({ children }) => {
 
     // Admin Actions
     const addSlot = (slotData) => {
-        const newSlot = { ...slotData, id: `S${Date.now()}`, isOccupied: false, isMaintenance: false };
+        const newSlot = { ...slotData, id: `S${Date.now()}`, isOccupied: false, isMaintenance: false, isActive: true };
         setSlots([...slots, newSlot]);
     };
 
-    const removeSlot = (slotId) => {
-        setSlots(slots.filter(s => s.id !== slotId));
+    const removeSlot = (id) => {
+        setSlots(prev => prev.filter(slot => slot.id !== id));
     };
 
-    const toggleMaintenance = (slotId) => {
-        setSlots(slots.map(s => {
-            if (s.id === slotId) {
+    const updateSlot = (id, updatedData) => {
+        setSlots(prev => prev.map(slot =>
+            slot.id === id ? { ...slot, ...updatedData } : slot
+        ));
+    };
+
+    const toggleMaintenance = (id) => {
+        setSlots(prev => prev.map(slot => {
+            if (slot.id === id) {
                 // If entering maintenance, force it to be unoccupied (or could keep occupied but frozen)
                 // For now, let's just toggle the flag. If it's occupied, it remains occupied effectively but status changes.
-                return { ...s, isMaintenance: !s.isMaintenance };
+                return { ...slot, isMaintenance: !slot.isMaintenance };
             }
-            return s;
+            return slot;
         }));
+    };
+
+    const toggleActive = (slotId) => {
+        setSlots(slots.map(s => s.id === slotId ? { ...s, isActive: !s.isActive } : s));
     };
 
     // User/Booking Actions
     const bookSlot = (slotId, user, vehicleNo) => {
         const slot = slots.find(s => s.id === slotId);
         if (!slot) throw new Error('Slot not found');
+        if (!slot.isActive) throw new Error('Slot is currently disabled');
         if (slot.isMaintenance) throw new Error('Slot is under maintenance');
         if (slot.isOccupied) throw new Error('Slot not available');
 
@@ -220,7 +236,9 @@ export const ParkingProvider = ({ children }) => {
         bookings,
         addSlot,
         removeSlot,
+        updateSlot,
         toggleMaintenance,
+        toggleActive,
         bookSlot,
         releaseSlot
     };

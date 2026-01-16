@@ -1,10 +1,12 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
-import { Menu, X, Car, LayoutDashboard, LogOut } from 'lucide-react';
+import { useTheme } from '../../context/ThemeContext';
+import { Menu, X, Car, LayoutDashboard, LogOut, Sun, Moon } from 'lucide-react';
 import { useState } from 'react';
 
 export default function Navbar() {
     const { user, logout } = useAuth();
+    const { theme, toggleTheme } = useTheme();
     const navigate = useNavigate();
     const [isOpen, setIsOpen] = useState(false);
 
@@ -14,19 +16,21 @@ export default function Navbar() {
     };
 
     return (
-        <nav className="card" style={{
-            borderRadius: 0,
-            borderLeft: 'none',
-            borderRight: 'none',
-            borderTop: 'none',
-            padding: '1rem 2rem',
+        <nav style={{
             position: 'sticky',
-            top: 0,
+            top: '1rem',
             zIndex: 50,
-            background: 'rgba(30, 41, 59, 0.8)',
-            backdropFilter: 'blur(10px)'
+            padding: '0 1rem',
+            marginBottom: '2rem'
         }}>
-            <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <div className="card" style={{
+                borderRadius: '1.5rem',
+                padding: '1rem 2rem',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                // Styles moved to .card class in CSS for theming support
+            }}>
 
                 {/* Brand */}
                 <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '1.5rem', fontWeight: 'bold' }}>
@@ -38,6 +42,9 @@ export default function Navbar() {
 
                 {/* Desktop Menu */}
                 <div className="desktop-menu" style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
+                    <button onClick={toggleTheme} className="btn btn-secondary" style={{ padding: '0.5rem', borderRadius: '50%' }} aria-label="Toggle Theme">
+                        {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+                    </button>
                     {!user ? (
                         <>
                             <Link to="/login" style={{ color: 'var(--text-muted)' }}>Sign In</Link>
@@ -58,9 +65,8 @@ export default function Navbar() {
                     )}
                 </div>
 
-                {/* Mobile Toggle (Simple implementation) */}
+                {/* Mobile Toggle - Improved implementation would go here */}
                 <div style={{ display: 'none' }}>
-                    {/* Add media query CSS for mobile implementation later if needed */}
                 </div>
             </div>
         </nav>
