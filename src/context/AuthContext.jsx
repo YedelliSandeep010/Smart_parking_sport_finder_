@@ -78,8 +78,6 @@ export const AuthProvider = ({ children }) => {
         // Remove old insecure key if exists to fully migrate
         localStorage.removeItem('park_ease_users');
 
-        // Auto login after register
-        login(userData.email, userData.password, userData.role);
     };
 
     // Login function

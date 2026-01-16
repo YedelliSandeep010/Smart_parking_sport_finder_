@@ -20,11 +20,7 @@ export default function Register() {
         e.preventDefault();
         try {
             register(formData);
-            if (formData.role === 'admin') {
-                navigate('/admin/dashboard');
-            } else {
-                navigate('/dashboard');
-            }
+            navigate('/login');
         } catch (err) {
             setError(err.message);
         }
