@@ -14,10 +14,10 @@ export default function Login() {
     const { login } = useAuth();
     const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            login(formData.email, formData.password, formData.role);
+            await login(formData.email, formData.password, formData.role);
             if (formData.role === 'admin') {
                 navigate('/admin/dashboard');
             } else {

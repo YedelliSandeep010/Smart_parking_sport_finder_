@@ -16,10 +16,10 @@ export default function Register() {
     const { register } = useAuth();
     const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            register(formData);
+            await register(formData);
             navigate('/login');
         } catch (err) {
             setError(err.message);

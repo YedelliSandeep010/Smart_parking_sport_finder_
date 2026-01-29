@@ -1,0 +1,13 @@
+com\parkease\backend\model\User.class
+com\parkease\backend\repository\BookingRepository.class
+com\parkease\backend\config\CorsConfig.class
+com\parkease\backend\controller\SlotController.class
+com\parkease\backend\BackendApplication.class
+com\parkease\backend\controller\BookingController.class
+com\parkease\backend\repository\UserRepository.class
+com\parkease\backend\controller\AuthController.class
+com\parkease\backend\config\DataSeeder.class
+com\parkease\backend\repository\ParkingSlotRepository.class
+com\parkease\backend\model\Booking.class
+com\parkease\backend\config\CorsConfig$1.class
+com\parkease\backend\model\ParkingSlot.class

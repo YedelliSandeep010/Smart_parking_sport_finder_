@@ -1,0 +1,408 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< com.parkease:backend >------------------------
+[INFO] Building ParkEase Backend 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ backend ---
+[INFO] Deleting D:\6 - Copy\backend\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ backend ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ backend ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 12 source files with javac [debug release 17] to target\classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/config/DataSeeder.java:[22,25] constructor ParkingSlot in class com.parkease.backend.model.ParkingSlot cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,int,int,boolean,boolean
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/config/DataSeeder.java:[24,25] constructor ParkingSlot in class com.parkease.backend.model.ParkingSlot cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,int,int,boolean,boolean
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/config/DataSeeder.java:[26,25] constructor ParkingSlot in class com.parkease.backend.model.ParkingSlot cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,int,int,boolean,boolean
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/config/DataSeeder.java:[28,25] constructor ParkingSlot in class com.parkease.backend.model.ParkingSlot cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,int,int,boolean,boolean
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/config/DataSeeder.java:[30,25] constructor ParkingSlot in class com.parkease.backend.model.ParkingSlot cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,int,int,boolean,boolean
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/config/DataSeeder.java:[32,25] constructor ParkingSlot in class com.parkease.backend.model.ParkingSlot cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,int,int,boolean,boolean
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/config/DataSeeder.java:[34,25] constructor ParkingSlot in class com.parkease.backend.model.ParkingSlot cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,int,int,boolean,boolean
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/config/DataSeeder.java:[36,25] constructor ParkingSlot in class com.parkease.backend.model.ParkingSlot cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,int,int,boolean,boolean
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/config/DataSeeder.java:[38,25] constructor ParkingSlot in class com.parkease.backend.model.ParkingSlot cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,int,int,boolean,boolean
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/config/DataSeeder.java:[40,25] constructor ParkingSlot in class com.parkease.backend.model.ParkingSlot cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,int,int,boolean,boolean
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/config/DataSeeder.java:[42,25] constructor ParkingSlot in class com.parkease.backend.model.ParkingSlot cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,int,int,boolean,boolean
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/config/DataSeeder.java:[44,25] constructor ParkingSlot in class com.parkease.backend.model.ParkingSlot cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,int,int,boolean,boolean
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/config/DataSeeder.java:[46,25] constructor ParkingSlot in class com.parkease.backend.model.ParkingSlot cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,int,int,boolean,boolean
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/config/DataSeeder.java:[48,25] constructor ParkingSlot in class com.parkease.backend.model.ParkingSlot cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,int,int,boolean,boolean
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/config/DataSeeder.java:[50,25] constructor ParkingSlot in class com.parkease.backend.model.ParkingSlot cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,int,int,boolean,boolean
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/config/DataSeeder.java:[52,25] constructor ParkingSlot in class com.parkease.backend.model.ParkingSlot cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,int,int,boolean,boolean
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/config/DataSeeder.java:[54,25] constructor ParkingSlot in class com.parkease.backend.model.ParkingSlot cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,int,int,boolean,boolean
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/config/DataSeeder.java:[56,25] constructor ParkingSlot in class com.parkease.backend.model.ParkingSlot cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,int,int,boolean,boolean
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/config/DataSeeder.java:[58,25] constructor ParkingSlot in class com.parkease.backend.model.ParkingSlot cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,int,int,boolean,boolean
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/config/DataSeeder.java:[65,25] constructor User in class com.parkease.backend.model.User cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/BookingController.java:[31,47] cannot find symbol
+  symbol:   method getSlotId()
+  location: variable booking of type com.parkease.backend.model.Booking
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/BookingController.java:[40,32] cannot find symbol
+  symbol:   method getStartTime()
+  location: variable booking of type com.parkease.backend.model.Booking
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/BookingController.java:[40,66] cannot find symbol
+  symbol:   method getEndTime()
+  location: variable booking of type com.parkease.backend.model.Booking
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/BookingController.java:[40,98] cannot find symbol
+  symbol:   method getEndTime()
+  location: variable booking of type com.parkease.backend.model.Booking
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/BookingController.java:[45,32] cannot find symbol
+  symbol:   method getId()
+  location: variable booking of type com.parkease.backend.model.Booking
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/BookingController.java:[46,32] cannot find symbol
+  symbol:   method setId(java.lang.String)
+  location: variable booking of type com.parkease.backend.model.Booking
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/BookingController.java:[48,28] cannot find symbol
+  symbol:   method setStatus(java.lang.String)
+  location: variable booking of type com.parkease.backend.model.Booking
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/BookingController.java:[59,56] cannot find symbol
+  symbol:   method getStartTime()
+  location: variable booking of type com.parkease.backend.model.Booking
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/BookingController.java:[64,28] cannot find symbol
+  symbol:   method setEndTime(long)
+  location: variable booking of type com.parkease.backend.model.Booking
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/BookingController.java:[65,28] cannot find symbol
+  symbol:   method setStatus(java.lang.String)
+  location: variable booking of type com.parkease.backend.model.Booking
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/BookingController.java:[66,28] cannot find symbol
+  symbol:   method setCost(double)
+  location: variable booking of type com.parkease.backend.model.Booking
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/BookingController.java:[69,52] cannot find symbol
+  symbol:   method getSlotId()
+  location: variable booking of type com.parkease.backend.model.Booking
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/SlotController.java:[25,17] cannot find symbol
+  symbol:   method getId()
+  location: variable slot of type com.parkease.backend.model.ParkingSlot
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/SlotController.java:[26,17] cannot find symbol
+  symbol:   method setId(java.lang.String)
+  location: variable slot of type com.parkease.backend.model.ParkingSlot
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/SlotController.java:[28,13] cannot find symbol
+  symbol:   method setOccupied(boolean)
+  location: variable slot of type com.parkease.backend.model.ParkingSlot
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/SlotController.java:[29,13] cannot find symbol
+  symbol:   method setMaintenance(boolean)
+  location: variable slot of type com.parkease.backend.model.ParkingSlot
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/SlotController.java:[30,13] cannot find symbol
+  symbol:   method setActive(boolean)
+  location: variable slot of type com.parkease.backend.model.ParkingSlot
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/SlotController.java:[38,47] cannot find symbol
+  symbol:   method getRegion()
+  location: variable slotDetails of type com.parkease.backend.model.ParkingSlot
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/SlotController.java:[39,45] cannot find symbol
+  symbol:   method getCity()
+  location: variable slotDetails of type com.parkease.backend.model.ParkingSlot
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/SlotController.java:[40,46] cannot find symbol
+  symbol:   method getVenue()
+  location: variable slotDetails of type com.parkease.backend.model.ParkingSlot
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/SlotController.java:[41,49] cannot find symbol
+  symbol:   method getLocation()
+  location: variable slotDetails of type com.parkease.backend.model.ParkingSlot
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/SlotController.java:[42,45] cannot find symbol
+  symbol:   method getType()
+  location: variable slotDetails of type com.parkease.backend.model.ParkingSlot
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/SlotController.java:[43,42] cannot find symbol
+  symbol:   method getX()
+  location: variable slotDetails of type com.parkease.backend.model.ParkingSlot
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/SlotController.java:[44,42] cannot find symbol
+  symbol:   method getY()
+  location: variable slotDetails of type com.parkease.backend.model.ParkingSlot
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/SlotController.java:[45,49] cannot find symbol
+  symbol:   method isOccupied()
+  location: variable slotDetails of type com.parkease.backend.model.ParkingSlot
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/SlotController.java:[46,52] cannot find symbol
+  symbol:   method isMaintenance()
+  location: variable slotDetails of type com.parkease.backend.model.ParkingSlot
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/SlotController.java:[47,47] cannot find symbol
+  symbol:   method isActive()
+  location: variable slotDetails of type com.parkease.backend.model.ParkingSlot
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/SlotController.java:[67,46] cannot find symbol
+  symbol:   method isMaintenance()
+  location: variable slot of type com.parkease.backend.model.ParkingSlot
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/SlotController.java:[77,41] cannot find symbol
+  symbol:   method isActive()
+  location: variable slot of type com.parkease.backend.model.ParkingSlot
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/AuthController.java:[21,44] cannot find symbol
+  symbol:   method getEmail()
+  location: variable user of type com.parkease.backend.model.User
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/AuthController.java:[24,17] cannot find symbol
+  symbol:   method getId()
+  location: variable user of type com.parkease.backend.model.User
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/AuthController.java:[25,17] cannot find symbol
+  symbol:   method setId(java.lang.String)
+  location: variable user of type com.parkease.backend.model.User
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/AuthController.java:[40,30] constructor User in class com.parkease.backend.model.User cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,<nulltype>,<nulltype>
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/AuthController.java:[48,49] cannot find symbol
+  symbol:   method getPassword()
+  location: class com.parkease.backend.model.User
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/AuthController.java:[49,33] cannot find symbol
+  symbol:   method getRole()
+  location: class com.parkease.backend.model.User
+[INFO] 55 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.616 s
+[INFO] Finished at: 2026-01-29T13:42:44+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile (default-compile) on project backend: Compilation failure: Compilation failure: 
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/config/DataSeeder.java:[22,25] constructor ParkingSlot in class com.parkease.backend.model.ParkingSlot cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,int,int,boolean,boolean
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/config/DataSeeder.java:[24,25] constructor ParkingSlot in class com.parkease.backend.model.ParkingSlot cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,int,int,boolean,boolean
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/config/DataSeeder.java:[26,25] constructor ParkingSlot in class com.parkease.backend.model.ParkingSlot cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,int,int,boolean,boolean
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/config/DataSeeder.java:[28,25] constructor ParkingSlot in class com.parkease.backend.model.ParkingSlot cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,int,int,boolean,boolean
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/config/DataSeeder.java:[30,25] constructor ParkingSlot in class com.parkease.backend.model.ParkingSlot cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,int,int,boolean,boolean
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/config/DataSeeder.java:[32,25] constructor ParkingSlot in class com.parkease.backend.model.ParkingSlot cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,int,int,boolean,boolean
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/config/DataSeeder.java:[34,25] constructor ParkingSlot in class com.parkease.backend.model.ParkingSlot cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,int,int,boolean,boolean
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/config/DataSeeder.java:[36,25] constructor ParkingSlot in class com.parkease.backend.model.ParkingSlot cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,int,int,boolean,boolean
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/config/DataSeeder.java:[38,25] constructor ParkingSlot in class com.parkease.backend.model.ParkingSlot cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,int,int,boolean,boolean
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/config/DataSeeder.java:[40,25] constructor ParkingSlot in class com.parkease.backend.model.ParkingSlot cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,int,int,boolean,boolean
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/config/DataSeeder.java:[42,25] constructor ParkingSlot in class com.parkease.backend.model.ParkingSlot cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,int,int,boolean,boolean
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/config/DataSeeder.java:[44,25] constructor ParkingSlot in class com.parkease.backend.model.ParkingSlot cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,int,int,boolean,boolean
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/config/DataSeeder.java:[46,25] constructor ParkingSlot in class com.parkease.backend.model.ParkingSlot cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,int,int,boolean,boolean
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/config/DataSeeder.java:[48,25] constructor ParkingSlot in class com.parkease.backend.model.ParkingSlot cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,int,int,boolean,boolean
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/config/DataSeeder.java:[50,25] constructor ParkingSlot in class com.parkease.backend.model.ParkingSlot cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,int,int,boolean,boolean
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/config/DataSeeder.java:[52,25] constructor ParkingSlot in class com.parkease.backend.model.ParkingSlot cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,int,int,boolean,boolean
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/config/DataSeeder.java:[54,25] constructor ParkingSlot in class com.parkease.backend.model.ParkingSlot cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,int,int,boolean,boolean
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/config/DataSeeder.java:[56,25] constructor ParkingSlot in class com.parkease.backend.model.ParkingSlot cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,int,int,boolean,boolean
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/config/DataSeeder.java:[58,25] constructor ParkingSlot in class com.parkease.backend.model.ParkingSlot cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,int,int,boolean,boolean
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/config/DataSeeder.java:[65,25] constructor User in class com.parkease.backend.model.User cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/BookingController.java:[31,47] cannot find symbol
+[ERROR]   symbol:   method getSlotId()
+[ERROR]   location: variable booking of type com.parkease.backend.model.Booking
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/BookingController.java:[40,32] cannot find symbol
+[ERROR]   symbol:   method getStartTime()
+[ERROR]   location: variable booking of type com.parkease.backend.model.Booking
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/BookingController.java:[40,66] cannot find symbol
+[ERROR]   symbol:   method getEndTime()
+[ERROR]   location: variable booking of type com.parkease.backend.model.Booking
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/BookingController.java:[40,98] cannot find symbol
+[ERROR]   symbol:   method getEndTime()
+[ERROR]   location: variable booking of type com.parkease.backend.model.Booking
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/BookingController.java:[45,32] cannot find symbol
+[ERROR]   symbol:   method getId()
+[ERROR]   location: variable booking of type com.parkease.backend.model.Booking
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/BookingController.java:[46,32] cannot find symbol
+[ERROR]   symbol:   method setId(java.lang.String)
+[ERROR]   location: variable booking of type com.parkease.backend.model.Booking
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/BookingController.java:[48,28] cannot find symbol
+[ERROR]   symbol:   method setStatus(java.lang.String)
+[ERROR]   location: variable booking of type com.parkease.backend.model.Booking
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/BookingController.java:[59,56] cannot find symbol
+[ERROR]   symbol:   method getStartTime()
+[ERROR]   location: variable booking of type com.parkease.backend.model.Booking
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/BookingController.java:[64,28] cannot find symbol
+[ERROR]   symbol:   method setEndTime(long)
+[ERROR]   location: variable booking of type com.parkease.backend.model.Booking
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/BookingController.java:[65,28] cannot find symbol
+[ERROR]   symbol:   method setStatus(java.lang.String)
+[ERROR]   location: variable booking of type com.parkease.backend.model.Booking
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/BookingController.java:[66,28] cannot find symbol
+[ERROR]   symbol:   method setCost(double)
+[ERROR]   location: variable booking of type com.parkease.backend.model.Booking
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/BookingController.java:[69,52] cannot find symbol
+[ERROR]   symbol:   method getSlotId()
+[ERROR]   location: variable booking of type com.parkease.backend.model.Booking
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/SlotController.java:[25,17] cannot find symbol
+[ERROR]   symbol:   method getId()
+[ERROR]   location: variable slot of type com.parkease.backend.model.ParkingSlot
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/SlotController.java:[26,17] cannot find symbol
+[ERROR]   symbol:   method setId(java.lang.String)
+[ERROR]   location: variable slot of type com.parkease.backend.model.ParkingSlot
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/SlotController.java:[28,13] cannot find symbol
+[ERROR]   symbol:   method setOccupied(boolean)
+[ERROR]   location: variable slot of type com.parkease.backend.model.ParkingSlot
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/SlotController.java:[29,13] cannot find symbol
+[ERROR]   symbol:   method setMaintenance(boolean)
+[ERROR]   location: variable slot of type com.parkease.backend.model.ParkingSlot
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/SlotController.java:[30,13] cannot find symbol
+[ERROR]   symbol:   method setActive(boolean)
+[ERROR]   location: variable slot of type com.parkease.backend.model.ParkingSlot
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/SlotController.java:[38,47] cannot find symbol
+[ERROR]   symbol:   method getRegion()
+[ERROR]   location: variable slotDetails of type com.parkease.backend.model.ParkingSlot
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/SlotController.java:[39,45] cannot find symbol
+[ERROR]   symbol:   method getCity()
+[ERROR]   location: variable slotDetails of type com.parkease.backend.model.ParkingSlot
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/SlotController.java:[40,46] cannot find symbol
+[ERROR]   symbol:   method getVenue()
+[ERROR]   location: variable slotDetails of type com.parkease.backend.model.ParkingSlot
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/SlotController.java:[41,49] cannot find symbol
+[ERROR]   symbol:   method getLocation()
+[ERROR]   location: variable slotDetails of type com.parkease.backend.model.ParkingSlot
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/SlotController.java:[42,45] cannot find symbol
+[ERROR]   symbol:   method getType()
+[ERROR]   location: variable slotDetails of type com.parkease.backend.model.ParkingSlot
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/SlotController.java:[43,42] cannot find symbol
+[ERROR]   symbol:   method getX()
+[ERROR]   location: variable slotDetails of type com.parkease.backend.model.ParkingSlot
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/SlotController.java:[44,42] cannot find symbol
+[ERROR]   symbol:   method getY()
+[ERROR]   location: variable slotDetails of type com.parkease.backend.model.ParkingSlot
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/SlotController.java:[45,49] cannot find symbol
+[ERROR]   symbol:   method isOccupied()
+[ERROR]   location: variable slotDetails of type com.parkease.backend.model.ParkingSlot
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/SlotController.java:[46,52] cannot find symbol
+[ERROR]   symbol:   method isMaintenance()
+[ERROR]   location: variable slotDetails of type com.parkease.backend.model.ParkingSlot
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/SlotController.java:[47,47] cannot find symbol
+[ERROR]   symbol:   method isActive()
+[ERROR]   location: variable slotDetails of type com.parkease.backend.model.ParkingSlot
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/SlotController.java:[67,46] cannot find symbol
+[ERROR]   symbol:   method isMaintenance()
+[ERROR]   location: variable slot of type com.parkease.backend.model.ParkingSlot
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/SlotController.java:[77,41] cannot find symbol
+[ERROR]   symbol:   method isActive()
+[ERROR]   location: variable slot of type com.parkease.backend.model.ParkingSlot
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/AuthController.java:[21,44] cannot find symbol
+[ERROR]   symbol:   method getEmail()
+[ERROR]   location: variable user of type com.parkease.backend.model.User
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/AuthController.java:[24,17] cannot find symbol
+[ERROR]   symbol:   method getId()
+[ERROR]   location: variable user of type com.parkease.backend.model.User
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/AuthController.java:[25,17] cannot find symbol
+[ERROR]   symbol:   method setId(java.lang.String)
+[ERROR]   location: variable user of type com.parkease.backend.model.User
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/AuthController.java:[40,30] constructor User in class com.parkease.backend.model.User cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,<nulltype>,<nulltype>
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/AuthController.java:[48,49] cannot find symbol
+[ERROR]   symbol:   method getPassword()
+[ERROR]   location: class com.parkease.backend.model.User
+[ERROR] /D:/6 - Copy/backend/src/main/java/com/parkease/backend/controller/AuthController.java:[49,33] cannot find symbol
+[ERROR]   symbol:   method getRole()
+[ERROR]   location: class com.parkease.backend.model.User
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
